@@ -1,0 +1,273 @@
+section {
+    margin: 10px 0;
+    // width: 60%;
+}
+
+.container {
+    width: 1280px;
+    // width: 80%;
+}
+
+#homeNews {
+  background: url(/assets/images/back-news.png);
+      background-repeat: repeat;
+      background-size: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 120px;
+}
+.mainMaxWidth {
+  max-width: 940px;
+  float: none;
+  margin: auto;
+  clear: both;
+}
+.block {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 100%;
+}
+
+// p {
+//     color: #43464b;
+// }
+
+.col-md-6 {
+    width: 50%;
+}
+
+h3::after {
+    display: block;
+    width: 60px;
+    height: 2px;
+    margin-top: 8px;
+    content: '';
+    background-color: #f26b38;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    line-height: 1.5;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+.blog {
+    display: table;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.blog .movie-thumb {
+    float: left;
+    position: relative;
+    margin: 0 20px 0 0;
+}
+
+.blog .movie-thumb a {
+    display: block;
+    width: 200px;
+    height: auto;
+}
+
+.blog .movie-thumb a img {
+    width: 210px;
+    height: 160px;
+}
+
+.blog:hover h5 a {
+    color: #f26b38;
+}
+
+.blog h5 a {
+    line-height: 22px;
+    color: #43464b;
+    text-align: center;
+}
+
+.blog h5 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 60px;
+}
+
+.blog .blog-content {
+  color: #a0a3a7;
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 2;
+  -moz-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  text-align: justify;
+  max-height: 42px;
+}
+.blog .blog-content {
+  color: #a0a3a7;
+  font-size: 14px;
+  text-align: justify;
+}
+a:hover,
+a:focus {
+    color: #f26b38;
+    text-decoration: none;
+}
+
+//like
+ul.article-blog-like {
+    padding-bottom: 8px;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+ul li {
+  list-style: none;
+}
+//view
+ul.article-blog-like li {
+  display: inline-block;
+  vertical-align: middle;
+}
+ul.article-blog-like li span ,ul.article-blog-like li .sp1 {
+  font-size: 12px;
+  vertical-align: middle;
+}
+.view-wrap {
+  background-color: #e9edf1;
+  border-radius: 3px;
+  padding: 4px 10px;
+  color: #43464b;
+}
+ul.article-blog-like li i {
+  font-size: 22px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+.icon-view {
+  width: 20px;
+  height: 11px;
+  display: inline-block;
+  background: url("/assets/images/ic-view.png ") no-repeat;
+  background-size: auto;
+  background-size: cover;
+}
+
+//star
+
+.rating-movie.rating-home {
+  background-size: 20px;
+  height: 25px;
+  padding-left: 24px;
+  margin-left: 10px;
+}
+
+.rating-movie {
+  font-size: 11px;
+  height: 40px;
+  background: url("/assets/images/ic_star_yellow.png") no-repeat;
+      background-position-x: 0%;
+      background-position-y: 0%;
+      background-size: auto;
+  background-size: 21px;
+  padding-left: 24px;
+  background-position: left center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.rating-movie.rating-home .rating-value {
+  float: left;
+}
+.rating-movie .rating-value {
+  margin-bottom: -2px;
+  white-space: nowrap;
+}
+
+.rating-movie.rating-home .rating-value strong.review-home {
+  font-size: 16px;
+}
+
+.rating-movie.rating-home .rating-value strong {
+  font-size: 20px;
+  line-height: 24px;
+  vertical-align: unset;
+}
+b, strong {
+  font-weight: 500;
+}
+.rating-movie.rating-home .rating-value span {
+  font-size: 16px;
+  vertical-align: unset;
+}
+.rating-movie .rating-value span {
+  color: #a0a3a7;
+  font-size: 18px;
+  margin: 0;
+  vertical-align: unset;
+}
+//p
+.blog .blog-content {
+    color: #a0a3a7;
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 2;
+    -moz-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    text-align: justify;
+    max-height: 42px;
+    line-height: 1.5;
+}
+html, body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #43464b;
+  -webkit-text-size-adjust: 100%;
+}

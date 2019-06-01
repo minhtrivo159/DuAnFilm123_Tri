@@ -1,0 +1,692 @@
+/////////
+#mainContent.checkout {
+  margin: 0;
+}
+#mainContent {
+  margin-top: 60px;
+}
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/////////////
+
+.btn-group-vertical > .btn-group::after, .btn-group-vertical > .btn-group::before, .btn-toolbar::after, .btn-toolbar::before, .clearfix::after, .clearfix::before, .container-fluid::after, .container-fluid::before, .container::after, .container::before, .dl-horizontal dd::after, .dl-horizontal dd::before, .form-horizontal .form-group::after, .form-horizontal .form-group::before, .modal-footer::after, .modal-footer::before, .modal-header::after, .modal-header::before, .nav::after, .nav::before, .navbar-collapse::after, .navbar-collapse::before, .navbar-header::after, .navbar-header::before, .navbar::after, .navbar::before, .pager::after, .pager::before, .panel-body::after, .panel-body::before, .row::after, .row::before {
+  display: table;
+  content: " ";
+}
+
+::after, ::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+///////////row
+
+#checkout {
+  height: 100%;
+  font-family: "SF Regular";
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+///////////////check-out
+
+#checkout {
+  font-family: "SF Regular";
+}
+
+.btn-group-vertical > .btn-group::after, .btn-group-vertical > .btn-group::before, .btn-toolbar::after, .btn-toolbar::before, .clearfix::after, .clearfix::before, .container-fluid::after, .container-fluid::before, .container::after, .container::before, .dl-horizontal dd::after, .dl-horizontal dd::before, .form-horizontal .form-group::after, .form-horizontal .form-group::before, .modal-footer::after, .modal-footer::before, .modal-header::after, .modal-header::before, .nav::after, .nav::before, .navbar-collapse::after, .navbar-collapse::before, .navbar-header::after, .navbar-header::before, .navbar::after, .navbar::before, .pager::after, .pager::before, .panel-body::after, .panel-body::before, .row::after, .row::before {
+	display: table;
+	content: " ";
+}
+/////////////stepcheckout
+
+#stepcheckout {
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,.3);
+  z-index: 3;
+  top: -1;
+  left: 0;
+  width: 100%;
+  height: 80px;
+}
+///////////// leftstep
+
+#stepcheckout .leftstep {
+  float: left;
+}
+
+///////////////  ul
+#stepcheckout .leftstep ul {
+  margin: 0px 100px 0 100px;
+
+padding-right: 40px;
+
+width: 100%;
+}
+ol, ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+///////////// li 1
+#stepcheckout .leftstep ul li.active {
+  color: #fb4226;
+  position: relative;
+}
+
+#stepcheckout .leftstep ul li {
+  font-size: 12px;
+}
+
+#stepcheckout .leftstep ul li {
+	font-family: "SF Medium";
+	display: inline-block;
+	list-style-type: none;
+	padding: 0 30px;
+	line-height: 80px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+// #stepcheckout .leftstep ul li .stepnumber {
+//   font-size: 18px;
+//   margin-right: 5px;
+// }
+
+#stepcheckout .leftstep ul li {
+  font-size: 12px;
+}
+
+#stepcheckout .leftstep ul li {
+  font-family: "SF Medium";
+  list-style-type: none;
+  line-height: 80px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+
+#stepcheckout .leftstep ul li.active::after {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid #fb4226;
+  width: calc(100% - 60px);
+  left: 50%;
+  bottom: -1;
+  transform: translateX(-50%);
+}
+
+///////////  row 2
+
+#leftcheckout {
+	min-height: calc(100% - 80px);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	top: 80px;
+	float: left;
+  width: 350px;
+  height: 270px;
+	position: fixed;
+	z-index: 1;
+}
+
+#leftcheckout .modalleft {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -15px;
+	right: 0;
+	background: #000;
+  opacity: .7;
+
+}
+
+#leftcheckout .back {
+	cursor: pointer;
+	position: fixed;
+	top: 100px;
+	height: 40px;
+	width: 100px;
+	padding-top: 8px;
+	text-align: center;
+	border-right: 1px solid #fff;
+}
+
+#leftcheckout .back .backbutton {
+  width: 20%;
+}
+img {
+  width: 100%;
+}
+img {
+  vertical-align: middle;
+}
+img {
+  border: 0;
+}
+
+
+#leftcheckout .titlefilm {
+
+    bottom: 126px !important;
+
+}
+#leftcheckout .titlefilm {
+
+    max-width: 35%;
+    color: #e9e9e9 !important;
+    position: fixed;
+    bottom: 157px;
+    left: 1%;
+    top: 60%;
+
+}
+
+#leftcheckout .titlefilm .info1 {
+  font-size: 12px;
+}
+#leftcheckout .titlefilm .info1 {
+  font-size: 14px;
+}
+p {
+  margin: 0 0 10px;
+}
+
+#leftcheckout .titlefilm .info2 {
+  font-size: 20px;
+}
+#leftcheckout .titlefilm .info2 {
+  font-family: "SF Medium";
+  font-size: 20px;
+}
+p {
+  margin: 0 0 10px;
+}
+
+#leftcheckout .titlefilm .info3 {
+  font-size: 14px;
+}
+#leftcheckout .titlefilm .info3 {
+  font-size: 16px;
+}
+p {
+  margin: 0 0 10px;
+}
+
+
+
+// ////
+// #leftcheckout img{
+//   // width: 370px;
+//   // height: 270px;
+
+// }
+
+///img-hinhanh
+.img-hinhanh{
+  // width: 400px;
+  // height: 552px;
+}
+
+//span C18
+#leftcheckout .titlefilm .info2 .ageType {
+  margin-right: 7px;
+  padding-bottom: 0;
+  font-size: 16px;
+  background-color: #fb4226;
+  padding: 5px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: 2px;
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////
+
+///////////////// ticketcheckout
+#ticketcheckout {
+	margin-left: 400px;
+margin-top: 80px;
+float: left;
+padding-top: 30px;
+width: 72%;
+}
+
+
+#ticketcheckout #ticket {
+  max-width: 800px;
+  margin: auto;
+}
+.row {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+// .row {
+//   margin-right: -15px;
+//   margin-left: -15px;
+// }
+.btn-group-vertical > .btn-group::after, .btn-group-vertical > .btn-group::before, .btn-toolbar::after, .btn-toolbar::before, .clearfix::after, .clearfix::before, .container-fluid::after, .container-fluid::before, .container::after, .container::before, .dl-horizontal dd::after, .dl-horizontal dd::before, .form-horizontal .form-group::after, .form-horizontal .form-group::before, .modal-footer::after, .modal-footer::before, .modal-header::after, .modal-header::before, .nav::after, .nav::before, .navbar-collapse::after, .navbar-collapse::before, .navbar-header::after, .navbar-header::before, .navbar::after, .navbar::before, .pager::after, .pager::before, .panel-body::after, .panel-body::before, .row::after, .row::before {
+  display: table;
+  content: " ";
+}
+
+
+#ticketcheckout #ticket .topContent .logocinema {
+  width: 40px;
+}
+#ticketcheckout #ticket .topContent .logocinema {
+  float: left;
+  width: 5.5%;
+  margin-right: 13px;
+}
+img {
+  width: 100%;
+}
+img {
+  vertical-align: middle;
+}
+img {
+  border: 0;
+}
+.logo{
+  width: 40px;
+}
+
+
+#ticketcheckout #ticket .topContent .contentcinema {
+  float: left;
+  margin: 0px 30px;
+}
+
+
+#ticketcheckout #ticket .topContent .contentcinema .address {
+  margin-top: 1px;
+}
+p {
+  margin: 0 0 10px;
+      margin-top: 0px;
+}
+
+
+#ticketcheckout #ticket .topContent .contentcinema .pcinema {
+  font-size: 14px;
+}
+#ticketcheckout #ticket .topContent .contentcinema .pcinema {
+  font-size: 16px;
+}
+
+
+
+#ticketcheckout #ticket .topContent .contentcinema .cinemaname {
+
+    font-size: 14px;
+
+}
+#ticketcheckout #ticket .topContent .contentcinema .cinemaname {
+
+    font-size: 16px;
+
+}
+
+#ticketcheckout #ticket .topContent .contentcinema .hour {
+  font-size: 12px;
+}
+#ticketcheckout #ticket .topContent .contentcinema .hour {
+  line-height: 5px;
+  font-size: 14px;
+  color: #9b9b9b !important;
+}
+p {
+  margin: 0 0 10px;
+}
+
+
+.btn-group-vertical > .btn-group::after, .btn-toolbar::after, .clearfix::after, .container-fluid::after, .container::after, .dl-horizontal dd::after, .form-horizontal .form-group::after, .modal-footer::after, .modal-header::after, .nav::after, .navbar-collapse::after, .navbar-header::after, .navbar::after, .pager::after, .panel-body::after, .row::after {
+  clear: both;
+}
+
+///////////////// ticketType
+
+#ticketcheckout #ticket .ticketType {
+  margin-top: 60px;
+
+  margin-left: 0px;
+
+  padding: 0px 15px;
+
+  width: 795px;
+}
+
+#ticketcheckout #ticket .ticketType .ticket {
+  margin-bottom: 10px;
+}
+#ticketcheckout #ticket .ticketType .ticket {
+  font-family: 'SF Medium';
+  margin-bottom: 20px;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+//col-sm-4
+// #ticketcheckout #ticket .ticketType .ticket .typeticket {
+//   font-size: 14px;
+// }
+#ticketcheckout #ticket .ticketType .ticket .typeticket {
+  font-size: 16px;
+  // padding-left: 0;
+}
+#ticketcheckout #ticket .ticketType .ticket .priceticket {
+  font-size: 16px;
+}
+.col-sm-4 {
+  width: 33.33333333%;
+}
+.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
+  float: left;
+}
+.col-xs-7 {
+  width: 58.33333333%;
+}
+
+.col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+  float: left;
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+#ticketcheckout #ticket .ticketType .ticket {
+  font-family: 'SF Medium';
+
+  height: 20px;
+}
+
+#ticketcheckout #ticket .ticketType .ticket .typeticket .priceticketmobile {
+  font-size: 15px;
+}
+#ticketcheckout #ticket .ticketType .ticket .typeticket .priceticketmobile {
+  display: none;
+  color: #44c020 !important;
+  font-size: 17px;
+}
+
+
+.ticket2{
+  text-align: center;
+}
+
+.ticket3{
+  text-align: right;
+}
+
+#ticketcheckout #ticket .ticketType .ticket .priceticket {
+  color: #44c020 !important;
+  font-size: 18px;
+  text-align: center;
+}
+
+/////////////////////// button
+
+////// -
+#ticketcheckout #ticket .ticketType .ticket .minus {
+  transform: scaleX(3);
+  font-size: 14px;
+}
+
+#ticketcheckout #ticket .ticketType .ticket .minus {
+  margin-right: 17px;
+  background: 0 0;
+  border: transparent;
+  color: #9b9b9b !important;
+  transform: scaleX(3);
+  font-size: 14px;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button, select {
+  text-transform: none;
+}
+button {
+  overflow: visible;
+}
+button, input, optgroup, select, textarea {
+  margin: 0;
+      margin-right: 0px;
+  font: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      font-family: inherit;
+  color: inherit;
+}
+
+/////////////// +
+#ticketcheckout #ticket .ticketType .ticket .add {
+  transform: scale(1.5);
+  font-size: 14px;
+}
+
+#ticketcheckout #ticket .ticketType .ticket .add {
+
+  margin-left: 13px;
+  background: 0 0;
+  border: transparent;
+  color: #fb4226 !important;
+  transform: scale(1.5);
+  font-size: 16px;
+
+}
+
+///////////////////
+#ticketcheckout #ticket .ticketType .ticket .number {
+
+  font-size: 16px;
+
+}
+
+#ticketcheckout #ticket .ticketType .ticket .number {
+
+  font-size: 16px;
+  border: 1px solid #e9e9e9;
+  border-radius: 4px;
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  display: inline-block;
+  padding-top: 4px;
+
+}
+
+///////////////////////////////////////////////
+#ticketcheckout #ticket .detailticket {
+  margin-top: 60px;
+  position: static;
+}
+
+#ticketcheckout #ticket .detailticket {
+
+  position: fixed;
+  left: 28%;
+  right: 0;
+  bottom: 40px;
+}
+
+
+.btn-group-vertical > .btn-group::after, .btn-toolbar::after, .clearfix::after, .container-fluid::after, .container::after, .dl-horizontal dd::after, .form-horizontal .form-group::after, .modal-footer::after, .modal-header::after, .nav::after, .navbar-collapse::after, .navbar-header::after, .navbar::after, .pager::after, .panel-body::after, .row::after {
+
+  clear: both;
+
+}
+.btn-group-vertical > .btn-group::after, .btn-group-vertical > .btn-group::before, .btn-toolbar::after, .btn-toolbar::before, .clearfix::after, .clearfix::before, .container-fluid::after, .container-fluid::before, .container::after, .container::before, .dl-horizontal dd::after, .dl-horizontal dd::before, .form-horizontal .form-group::after, .form-horizontal .form-group::before, .modal-footer::after, .modal-footer::before, .modal-header::after, .modal-header::before, .nav::after, .nav::before, .navbar-collapse::after, .navbar-collapse::before, .navbar-header::after, .navbar-header::before, .navbar::after, .navbar::before, .pager::after, .pager::before, .panel-body::after, .panel-body::before, .row::after, .row::before {
+
+  display: table;
+  content: " ";
+
+}
+
+////
+#ticketcheckout #ticket .chosenTicket {
+  margin: auto;
+  border: 1px solid #e9e9e9;
+  border-radius: 4px;
+  max-width: 800px;
+}
+
+#ticketcheckout #ticket .chosenTicket .chosencontent {
+  position: relative;
+  float: left;
+  // padding-left: 20px;
+  width: calc(100% - 160px);
+  height: 100px;
+}
+
+#ticketcheckout #ticket .chosenTicket .chosencontent .totalcostfull {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 20px;
+}
+
+#ticketcheckout #ticket .chosenTicket .chosencontent .title {
+  font-size: 10px;
+}
+#ticketcheckout #ticket .chosenTicket .chosencontent .title {
+  color: #9b9b9b !important;
+  font-size: 12px;
+}
+
+#ticketcheckout #ticket .chosenTicket .chosencontent .chosenpriceticket {
+  font-size: 22px;
+}
+#ticketcheckout #ticket .chosenTicket .chosencontent .chosenpriceticket {
+  font-family: 'SF Medium';
+  font-size: 24px;
+  color: #44c020 !important;
+}
+
+#ticketcheckout #ticket .chosenTicket .chosenbutton {
+  font-size: 14px;
+}
+
+#ticketcheckout #ticket .chosenTicket .chosenbutton {
+	position: relative;
+	float: left;
+	cursor: pointer;
+	width: 160px;
+	height: 100px;
+	font-size: 16px;
+	padding-top: 9%;
+	text-align: center;
+	color: #e9e9e9 !important;
+	background-image: linear-gradient(223deg,#b4ec51 0,#429321 100%);
+}
+
+#ticketcheckout #ticket .chosenTicket .chosenbutton .continue {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%,-50%,0);
+	width: 100px;
+}
+
+///////////
+
+#ticketcheckout #ticket .contact {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#ticketcheckout #ticket .contact .note {
+  font-size: 12px;
+}
+#ticketcheckout #ticket .contact .note {
+  font-size: 14px;
+  color: #9b9b9b !important;
+}
+
+#ticketcheckout #ticket .contact .hot {
+  margin-top: 20px;
+}
+
+#ticketcheckout #ticket .detailticket {
+  margin-top: 60px;
+  position: static;
+}
+#ticketcheckout #ticket .detailticket {
+  position: fixed;
+  left: 26%;
+  right: 0;
+  bottom: 20px;
+}
+
+#ticketcheckout #ticket .contact .hot .hotline {
+  display: inline-block;
+}
+
+#ticketcheckout #ticket .contact .hot .hotline .hotlinetitle {
+  font-size: 16px;
+}
+#ticketcheckout #ticket .contact .hot .hotline .hotlinetitle {
+  text-align: right;
+  line-height: 0;
+  font-size: 18px;
+  color: #9b9b9b !important;
+}
+p {
+  margin: 0 0 10px;
+}
+
+#ticketcheckout #ticket .contact .hot .hotline .costcall {
+  font-size: 8px;
+}
+#ticketcheckout #ticket .contact .hot .hotline .costcall {
+  font-size: 10px;
+  color: red;
+}
+p {
+  margin: 0 0 10px;
+}
+
+#ticketcheckout #ticket .contact .hot .phone {
+  font-size: 34px;
+}
+#ticketcheckout #ticket .contact .hot .phone {
+  display: inline-block;
+  font-size: 36px;
+}
+

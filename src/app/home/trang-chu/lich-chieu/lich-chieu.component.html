@@ -1,0 +1,244 @@
+<section id="myLichChieu" style="color:black">
+  <div class="app-lichchieu">
+    <div class="container">
+      <div id="cinemablock" class="row session-main grayBack ng-scope">
+        <div class="col-md-12 block mainMaxWidth" id="homeCinemaComplex">
+          <div class="noelBand"></div>
+          <div class="row">
+
+            <div class="col-md-2">
+              <!-- ul rạp -->
+              <ul id="parentListPCinemas" class="nav nav-tabs listPCinemas accordion">
+                <li>
+                  <a class="a1 active">
+                    <img ng-src="https://s3img.vcdn.vn/123phim/2018/09/e520781386bd5436e94d6e15e193a005.png"
+                      src="https://s3img.vcdn.vn/123phim/2018/09/e520781386bd5436e94d6e15e193a005.png">
+
+                  </a>
+
+                </li>
+
+                <li>
+                  <a>
+                    <img ng-src="https://s3img.vcdn.vn/123phim/2018/09/f32670fd0eb083c9c4c804f0f3a252ed.png"
+                      src="https://s3img.vcdn.vn/123phim/2018/09/f32670fd0eb083c9c4c804f0f3a252ed.png">
+
+                  </a>
+
+                </li>
+
+                <li>
+                  <a>
+                    <img ng-src="https://s3img.vcdn.vn/123phim/2018/09/404b8c4b80d77732e7426cdb7e24be20.png"
+                      src="https://s3img.vcdn.vn/123phim/2018/09/404b8c4b80d77732e7426cdb7e24be20.png">
+
+                  </a>
+
+                </li>
+
+                <li>
+                  <a>
+                    <img ng-src="https://s3img.vcdn.vn/123phim/2018/09/1721cfa98768f300c03792e25ceb0191.png"
+                      src="https://s3img.vcdn.vn/123phim/2018/09/1721cfa98768f300c03792e25ceb0191.png">
+
+                  </a>
+
+                </li>
+
+                <li>
+                  <a>
+                    <img ng-src="https://s3img.vcdn.vn/123phim/2018/09/9b240f96a233bb43203ee514a21a6004.png"
+                      src="https://s3img.vcdn.vn/123phim/2018/09/9b240f96a233bb43203ee514a21a6004.png">
+
+                  </a>
+
+                </li>
+
+                <li>
+                  <a>
+                    <img ng-src="https://s3img.vcdn.vn/123phim/2018/09/ee621ee05dcd4565caead4f29421b41e.png"
+                      src="https://s3img.vcdn.vn/123phim/2018/09/ee621ee05dcd4565caead4f29421b41e.png">
+
+                  </a>
+
+                </li>
+
+              </ul>
+            </div>
+
+            <div class="col-md-4 tab-content float-left" id="listCinemas1" style="height: 530px;">
+              <!-- 1 -->
+              <div class="ng-scope" ng-repeat="pCinema in listPCinemas" ng-show="pCinema.p_cinema_id == selectedHomePC">
+                <div ng-repeat="cinema in pCinema.cinemas" ng-click="setSelectedCinema(cinema.cinema_id)"
+                  class="cinema ng-scope active" data-id="8"
+                  ng-init="$index == 0 &amp;&amp; pCinema.p_cinema_id == selectedHomePCinema &amp;&amp; setFirstCinema(cinema.cinema_id)"
+                  ng-class="{'active': cinema.cinema_id == selectedHomeCinema}">
+                  <img ng-src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-nguyen-du-15379626329832.jpg"
+                    class="cinemaImage" src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-nguyen-du-15379626329832.jpg">
+                  <div class="wrapInfo">
+                    <!-- ngIf: cinema.cinema_name_s1.length !== 0 && cinema.cinema_name_s2.length !== 0 --><span
+                      ng-if="cinema.cinema_name_s1.length !== 0 &amp;&amp; cinema.cinema_name_s2.length !== 0"
+                      class="nameMovieCinema ng-binding ng-scope">
+                      <span class="colorCinema GLX">GLX</span>
+                      - Nguyễn Du</span>
+                    <!-- end ngIf: cinema.cinema_name_s1.length !== 0 && cinema.cinema_name_s2.length !== 0 -->
+                    <!-- ngIf: cinema.cinema_name_s1.length === 0 && cinema.cinema_name_s2.length === 0 -->
+                    <span class="infoMovieCinema ng-binding">116 Nguyễn Du, Q.1</span>
+                    <span class="redDetail showingDetailCinema" data-id="8">
+                      <a ng-click="goToCinemaDetail(cinema.cinema_slug, cinema.cinema_name_s2)"
+                        ui-sref="main.detailCinema({slug: cinema.cinema_slug})"
+                        href="/rap-chieu-phim/8-galaxy-nguyen-du">[chi tiết]</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- 2 -->
+              <div ng-repeat="cinema in pCinema.cinemas" ng-click="setSelectedCinema(cinema.cinema_id)"
+                class="cinema ng-scope" data-id="87"
+                ng-init="$index == 0 &amp;&amp; pCinema.p_cinema_id == selectedHomePCinema &amp;&amp; setFirstCinema(cinema.cinema_id)"
+                ng-class="{'active': cinema.cinema_id == selectedHomeCinema}">
+                <img ng-src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-quang-trung-15381040745219.jpg"
+                  class="cinemaImage" src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-quang-trung-15381040745219.jpg">
+                <div class="wrapInfo">
+                  <!-- ngIf: cinema.cinema_name_s1.length !== 0 && cinema.cinema_name_s2.length !== 0 --><span
+                    ng-if="cinema.cinema_name_s1.length !== 0 &amp;&amp; cinema.cinema_name_s2.length !== 0"
+                    class="nameMovieCinema ng-binding ng-scope">
+                    <span class="colorCinema GLX">GLX</span>
+                    - Quang Trung</span>
+                  <!-- end ngIf: cinema.cinema_name_s1.length !== 0 && cinema.cinema_name_s2.length !== 0 -->
+                  <!-- ngIf: cinema.cinema_name_s1.length === 0 && cinema.cinema_name_s2.length === 0 -->
+                  <span class="infoMovieCinema ng-binding">L3-Co.opmart Foodcosa, 304A Quang Trung, Gò Vấp</span>
+                  <span class="redDetail showingDetailCinema" data-id="87">
+                    <a ng-click="goToCinemaDetail(cinema.cinema_slug, cinema.cinema_name_s2)"
+                      ui-sref="main.detailCinema({slug: cinema.cinema_slug})"
+                      href="/rap-chieu-phim/87-galaxy-quang-trung">[chi tiết]</a>
+                  </span>
+                </div>
+              </div>
+              <!-- 3 -->
+              <div ng-repeat="cinema in pCinema.cinemas" ng-click="setSelectedCinema(cinema.cinema_id)"
+                class="cinema ng-scope" data-id="173"
+                ng-init="$index == 0 &amp;&amp; pCinema.p_cinema_id == selectedHomePCinema &amp;&amp; setFirstCinema(cinema.cinema_id)"
+                ng-class="{'active': cinema.cinema_id == selectedHomeCinema}">
+                <img ng-src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-trung-chanh-15381048160387.jpg"
+                  class="cinemaImage" src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-trung-chanh-15381048160387.jpg">
+                <div class="wrapInfo">
+                  <!-- ngIf: cinema.cinema_name_s1.length !== 0 && cinema.cinema_name_s2.length !== 0 --><span
+                    ng-if="cinema.cinema_name_s1.length !== 0 &amp;&amp; cinema.cinema_name_s2.length !== 0"
+                    class="nameMovieCinema ng-binding ng-scope">
+                    <span class="colorCinema GLX">GLX</span>
+                    - Trung Chánh</span>
+                  <!-- end ngIf: cinema.cinema_name_s1.length !== 0 && cinema.cinema_name_s2.length !== 0 -->
+                  <!-- ngIf: cinema.cinema_name_s1.length === 0 && cinema.cinema_name_s2.length === 0 -->
+                  <span class="infoMovieCinema ng-binding">TTVH Q12 – 09, Q L 22, Trung Mỹ Tây , Q.12</span>
+                  <span class="redDetail showingDetailCinema" data-id="173">
+                    <a ng-click="goToCinemaDetail(cinema.cinema_slug, cinema.cinema_name_s2)"
+                      ui-sref="main.detailCinema({slug: cinema.cinema_slug})"
+                      href="/rap-chieu-phim/173-galaxy-trung-chanh">[chi tiết]</a>
+                  </span>
+                </div>
+              </div>
+              <!-- 4 -->
+              <div ng-repeat="cinema in pCinema.cinemas" ng-click="setSelectedCinema(cinema.cinema_id)"
+                class="cinema ng-scope" data-id="280"
+                ng-init="$index == 0 &amp;&amp; pCinema.p_cinema_id == selectedHomePCinema &amp;&amp; setFirstCinema(cinema.cinema_id)"
+                ng-class="{'active': cinema.cinema_id == selectedHomeCinema}">
+                <img ng-src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-nguyen-van-qua-15381052937743.jpg"
+                  class="cinemaImage"
+                  src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-nguyen-van-qua-15381052937743.jpg">
+                <div class="wrapInfo">
+                  <!-- ngIf: cinema.cinema_name_s1.length !== 0 && cinema.cinema_name_s2.length !== 0 --><span
+                    ng-if="cinema.cinema_name_s1.length !== 0 &amp;&amp; cinema.cinema_name_s2.length !== 0"
+                    class="nameMovieCinema ng-binding ng-scope">
+                    <span class="colorCinema GLX">GLX</span>
+                    - Nguyễn Văn Quá</span>
+                  <!-- end ngIf: cinema.cinema_name_s1.length !== 0 && cinema.cinema_name_s2.length !== 0 -->
+                  <!-- ngIf: cinema.cinema_name_s1.length === 0 && cinema.cinema_name_s2.length === 0 -->
+                  <span class="infoMovieCinema ng-binding">119B Nguyễn Văn Quá, Đông Hưng Thuận, Q.12, TPHCM</span>
+                  <span class="redDetail showingDetailCinema" data-id="280">
+                    <a ng-click="goToCinemaDetail(cinema.cinema_slug, cinema.cinema_name_s2)"
+                      ui-sref="main.detailCinema({slug: cinema.cinema_slug})"
+                      href="/rap-chieu-phim/280-galaxy-nguyen-van-qua">[chi tiết]</a>
+                  </span>
+                </div>
+              </div>
+              <!-- 5 -->
+              <div ng-repeat="cinema in pCinema.cinemas" ng-click="setSelectedCinema(cinema.cinema_id)"
+                class="cinema ng-scope" data-id="184"
+                ng-init="$index == 0 &amp;&amp; pCinema.p_cinema_id == selectedHomePCinema &amp;&amp; setFirstCinema(cinema.cinema_id)"
+                ng-class="{'active': cinema.cinema_id == selectedHomeCinema}">
+                <img ng-src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-pham-van-chi-15381059548289.jpg"
+                  class="cinemaImage"
+                  src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-pham-van-chi-15381059548289.jpg">
+                <div class="wrapInfo">
+                  <!-- ngIf: cinema.cinema_name_s1.length !== 0 && cinema.cinema_name_s2.length !== 0 --><span
+                    ng-if="cinema.cinema_name_s1.length !== 0 &amp;&amp; cinema.cinema_name_s2.length !== 0"
+                    class="nameMovieCinema ng-binding ng-scope">
+                    <span class="colorCinema GLX">GLX</span>
+                    - Phạm Văn Chí</span>
+                  <!-- end ngIf: cinema.cinema_name_s1.length !== 0 && cinema.cinema_name_s2.length !== 0 -->
+                  <!-- ngIf: cinema.cinema_name_s1.length === 0 && cinema.cinema_name_s2.length === 0 -->
+                  <span class="infoMovieCinema ng-binding">Lầu 5, TTTM Platinum Plaza, 634 Phạm Văn Chí, Q.6</span>
+                  <span class="redDetail showingDetailCinema" data-id="184">
+                    <a ng-click="goToCinemaDetail(cinema.cinema_slug, cinema.cinema_name_s2)"
+                      ui-sref="main.detailCinema({slug: cinema.cinema_slug})"
+                      href="/rap-chieu-phim/184-galaxy-pham-van-chi">[chi tiết]</a>
+                  </span>
+                </div>
+              </div>
+              <!-- 6 -->
+              <div ng-repeat="cinema in pCinema.cinemas" ng-click="setSelectedCinema(cinema.cinema_id)"
+                class="cinema ng-scope" data-id="10"
+                ng-init="$index == 0 &amp;&amp; pCinema.p_cinema_id == selectedHomePCinema &amp;&amp; setFirstCinema(cinema.cinema_id)"
+                ng-class="{'active': cinema.cinema_id == selectedHomeCinema}">
+                <img ng-src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-tan-binh-15381063333729.jpg"
+                  class="cinemaImage" src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-tan-binh-15381063333729.jpg">
+                <div class="wrapInfo">
+                  <!-- ngIf: cinema.cinema_name_s1.length !== 0 && cinema.cinema_name_s2.length !== 0 --><span
+                    ng-if="cinema.cinema_name_s1.length !== 0 &amp;&amp; cinema.cinema_name_s2.length !== 0"
+                    class="nameMovieCinema ng-binding ng-scope">
+                    <span class="colorCinema GLX">GLX</span>
+                    - Tân Bình</span>
+                  <!-- end ngIf: cinema.cinema_name_s1.length !== 0 && cinema.cinema_name_s2.length !== 0 -->
+                  <!-- ngIf: cinema.cinema_name_s1.length === 0 && cinema.cinema_name_s2.length === 0 -->
+                  <span class="infoMovieCinema ng-binding">246 Nguyễn Hồng Đào, Tân Bình</span>
+                  <span class="redDetail showingDetailCinema" data-id="10">
+                    <a ng-click="goToCinemaDetail(cinema.cinema_slug, cinema.cinema_name_s2)"
+                      ui-sref="main.detailCinema({slug: cinema.cinema_slug})"
+                      href="/rap-chieu-phim/10-galaxy-tan-binh">[chi tiết]</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6" id="listMovies" style="height: 530px;">
+              <div data-cinema="8" class="ng-scope " *ngFor="let phim of DSPhim">
+
+                <div class="wrapMovie">
+                  <app-item-lich-chieu [phim]="phim"></app-item-lich-chieu>
+
+                  <p>
+                    <span class="ageType ng-binding ng-scope">C18</span>
+                    <span class="movieTitle ng-binding">{{phim.TenPhim}}</span>
+                  </p>
+                  <p class="ng-binding movieTimes">130 phút - 123Phim 8.9 - IMDb 8.2</p>
+                  <div class="listTypeTime ng-scope">
+                    <img ng-src="/assets/images/2_0.png" src="/assets/images/2_0.png">
+                    <div class="sessions">
+                      <a class="session ng-binding ng-scope" routerLink="/home/mua-ve/{{phim.MaPhim}}"> 20:45</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="noelBand"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12 block mainMaxWidth" id="homeCinemaComplex1">
+    </div>
+  </div>
+</section>

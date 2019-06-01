@@ -1,0 +1,71 @@
+<section id="myNavbar">
+  <div id="navbarHeader" class="container-fluid navbar navbar-expand-lg navbar-light ng-scope" ng-hide="isHideHeader"
+    ng-mouseover="hoverInHeader()">
+    <div class="row w-100">
+      <div class="col-md-4 logo">
+
+        <a  routerLink="/home"><img src="./assets/images/logo.png" alt=""></a>
+
+      </div>
+      <div class="col-md-4">
+        <div class="collapse navbar-collapse" id="headMenu" >
+          <ul class="navbar-nav mx-auto font-weight-normal textNavbar">
+            <li class="nav-item">
+              <a  class="nav-link" (click)="select('Phim');emitStatusChild()" >Phim</a>
+              <!-- routerLink="#myLichChieu" -->
+              <!-- <a href="myLichChieu"  class="menu titleDisplay cinemablock white" data-scroll="cinemablock">Lịch Chiếu</a> -->
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" (click)="select('CumRap');emitStatusChild()">Cụm Rạp</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" (click)="select('TinTuc');emitStatusChild()">Tin Tức</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" (click)="select('UngDung');emitStatusChild()">Ứng Dụng</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <!-- <li class="nav-item icon_user">
+              <img class="btnLogin" src="./assets/images/avatar.png">
+            </li> -->
+            <img class="btnLogin" src="./assets/images/avatar.png">
+
+            <!-- <li class="nav-item">
+              <p>{{nguoiDung.TaiKhoan}}</p>
+            </li> -->
+
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/home/signup">Đăng Ký</a>
+            </li>
+
+            <li class="nav-item">
+              <!-- <a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="#">Đăng Nhập</a> -->
+              <!-- <a class="nav-link" data-toggle="modal" data-target="#modalLRForm" >Đăng Nhập</a> -->
+              <a class="nav-link" routerLink="/home/signin">Đăng Nhập</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/home">VN</a>
+            </li>
+
+            <span class="line">|</span>
+
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/home">EN</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

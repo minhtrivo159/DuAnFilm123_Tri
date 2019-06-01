@@ -1,0 +1,225 @@
+<app-header (emitStatus)="goHome($event)" (selectEmit)="getId($event)"></app-header>
+
+
+<div class="container-fluid ct-container ">
+  <div class="row ">
+    <!--  -->
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Hình ảnh -->
+          <img class="m-5" src="{{phim.HinhAnh}}" width="100" height="200">
+
+          <div class="col-md-2 circleStar ng-scope" ng-if="filmDetail.avg_point > 0">
+            <div class="circleSum">
+            </div>
+            <div id="circlePercent" class="c100 p89">
+              <div class="circleBorder">
+              </div>
+              <span class="ng-binding">8.9</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+            <div id="starMain" class="row star ng-binding" style="margin-top: 10px"
+              ng-bind-html="setStar(filmDetail.avg_point)">
+              <img class="smallStar" src="./assets/images/star1.png">
+              <img class="smallStar" src="./assets/images/star1.png">
+              <img class="smallStar" src="./assets/images/star1.png">
+              <img class="smallStar" src="./assets/images/star1.png">
+              <img class="half" src="./assets/images/star1.2.png">
+            </div>
+            <div class="row" style="margin-top: 10px">
+              <span class="detailMainInfo1 ng-binding" style="margin: auto">90 người đánh giá</span>
+            </div>
+            <a (click)="scrollToElement(target)"
+              class="btn btn-danger btn_mua_ve nav-link">Mua Vé</a>
+
+          </div>
+
+        </div>
+        <div class="col-md-6">
+          <!-- Nội Dung -->
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+
+                <th>Thông Tin Phim</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>Tên Phim</td>
+                <td>{{phim.TenPhim | uppercase}}</td>
+              </tr>
+              <!-- <tr>
+                <td>Đánh Giá</td>
+                <td>{{phim.DanhGia}}</td>
+              </tr> -->
+              <tr>
+                <td>Ngày Khởi Chiếu</td>
+                <td>{{phim.NgayKhoiChieu | date: 'dd/MM/yyyy, hh:mm'}}</td>
+              </tr>
+              <tr>
+                <td>Nội Dung</td>
+                <td>{{phim.MoTa | uppercase }}</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <div class="row row-muave">
+        <div class="button_booking" #target>
+          <button class="btn  mt-5 mr-2" [routerLink]="['/home/mua-ve',lichchieu.MaLichChieu]"
+            *ngFor="let lichchieu of phim.LichChieu">
+            {{lichchieu.NgayChieuGioChieu| date:'dd/MM'}}
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-1"></div>
+
+
+  </div>
+
+
+<!--
+  <div class="button_booking" #target >
+      <button class="btn  mt-5 mr-2" [routerLink]="['/home/mua-ve',lichchieu.MaLichChieu]"
+      *ngFor="let lichchieu of phim.LichChieu">
+      {{lichchieu.NgayChieuGioChieu| date:'dd/MM'}}
+    </button>
+  </div> -->
+
+</div>
+
+
+<section id="myFooter">
+  <div class="footer_diachi">
+    <div class="diachi_item1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <div text_col_ft>
+              <p class="123_phim text_col_footer">123PHIM</p>
+            </div>
+            <div class="text_phim_content">
+              <ul class="p-0">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Brand Guidelines</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div text_col_ft>
+              <p class="123_phim text_col_footer">QUY ĐỊNH</p>
+            </div>
+            <div class="text_phim_content">
+              <ul class="p-0">
+                <li><a href="#">Thỏa thuận sử dụng</a></li>
+                <li><a href="#">Quy chế hoạt động</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
+                <li><a href="#">Quyền lợi thành viên</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div text_col_ft>
+              <p class="123_phim text_col_footer">ĐỐI TÁC</p>
+            </div>
+            <div class="container p-0 hinh_doitac">
+              <div class="row">
+                <div class="col-md-12 hinh_doitac_content">
+                  <ul class="p-0">
+                    <li class="li_active"><img src="./assets/images/doi-tac-1.png" alt=""></li>
+                    <li class="li_run"><img src="./assets/images/doi-tac-2.png" alt=""></li>
+                    <li class="li_run"><img src="./assets/images/doi-tac-3.png" alt=""></li>
+                    <li class="li_run"><img src="./assets/images/doi-tac-4.png" alt=""></li>
+                    <li class="li_run"><img src="./assets/images/doi-tac-5.jpg" alt=""></li>
+                  </ul>
+                </div>
+                <div class="col-md-12 hinh_doitac_content">
+                  <ul class="p-0">
+                    <li class="li_active"><img src="./assets/images/doi-tac-6.png" alt=""></li>
+                    <li class="li_run"><img src="./assets/images/doi-tac-7.png" alt=""></li>
+                    <li class="li_run"><img src="./assets/images/doi-tac-8.jpg" alt=""></li>
+                    <li class="li_run"><img src="./assets/images/doi-tac-9.png" alt=""></li>
+                    <li class="li_run"><img src="./assets/images/doi-tac-10.png" alt=""></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-12 hinh_doitac_content p-0">
+                <ul class="p-0">
+                  <li class="li_active"><img src="./assets/images/doi-tac-11.png" alt=""></li>
+                  <li class="li_run"><img src="./assets/images/doi-tac-12.png" alt=""></li>
+                  <li class="li_run"><img src="./assets/images/doi-tac-13.png" alt=""></li>
+                  <li class="li_run"><img src="./assets/images/doi-tac-14.png" alt=""></li>
+                  <li class="li_run"><img src="./assets/images/doi-tac-15.png" alt=""></li>
+                </ul>
+              </div>
+              <div class="col-md-12 hinh_doitac_content p-0">
+                <ul class="p-0">
+                  <li class="li_active"><img src="../../../assets/images/doi-tac-16.png" alt=""></li>
+                  <li class="li_run"><img src="../../../assets/images/doi-tac-17.png" alt=""></li>
+                  <li class="li_run"><img src="../../../assets/images/doi-tac-18.png" alt=""></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div text_col_ft>
+              <p class="123_phim text_col_footer">MOBILE APP</p>
+            </div>
+            <div class="col-md-12 hinh_doitac_content p-0">
+              <ul class="p-0">
+                <li class="li_active"><img src="../../../assets/images/apple-logo.png" alt=""></li>
+                <li class="li_run"><img src="../../../assets/images/android-logo.png" alt=""></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div text_col_ft>
+              <p class="123_phim text_col_footer">SOCIAL
+              </p>
+            </div>
+            <div class="col-md-12 hinh_doitac_content p-0">
+              <ul class="p-0">
+                <li class="li_active"><img src="../../../assets/images/facebook-logo.png" alt=""></li>
+                <li class="li_run"><img src="../../../assets/images/zalo-logo.png" alt=""></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="hrFooter">
+    </div>
+    <div class="location">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1 img_icon">
+            <img src="../../../assets/images/vng-icon.png" alt="">
+          </div>
+          <div class="col-md-9">
+            <span class="text_1">123PHIM - SẢN PHẨM CỦA CÔNG TY CP DỊCH VỤ MẠNG VI NA - MỘT THÀNH VIÊN CỦA CÔNG TY CỔ
+              PHẦN VNG</span>
+            <p class="text_2 m-0">Địa chỉ: 52 Nguyễn Ngọc Lộc, Phường 14, Quận 10, Tp Hồ Chí Minh</p>
+            <p class="text_3 p-0">Số ĐKKD: 0305418909, cấp lần đầu ngày 29/12/2007 – Sở KHĐT TP. HCM cấp</p>
+          </div>
+          <div class="col-md-2 img_icon_bct">
+            <img src="../../../assets/images/bocongthuong.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

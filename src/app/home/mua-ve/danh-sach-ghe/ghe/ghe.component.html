@@ -1,0 +1,8 @@
+<ng-container *ngIf="!ghe.DaDat; else GheDaDat">
+  <button class="btn btn-dark mr-1 mb-2"
+   [ngClass]="{'btn-success':status,'btn-dark':!status}"
+   (click)="datGhe()">{{ghe.TenGhe}}</button>
+</ng-container>
+<ng-template #GheDaDat>
+<button class="btn btn-danger mr-2 mb-2" disabled>{{ghe.TenGhe}}</button>
+</ng-template>
