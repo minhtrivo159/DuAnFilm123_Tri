@@ -12,7 +12,7 @@ import { VeService } from 'src/app/Services/phim/ve.service';
   templateUrl: './mua-ve.component.html',
   styleUrls: ['./mua-ve.component.scss']
 })
-export class MuaVeComponent implements OnInit, OnDestroy {
+export class MuaVeComponent implements OnInit {
   @ViewChild(DanhSachGheComponent) dsGhe: DanhSachGheComponent;
   public MaLichChieu: string;
   public DanhSachGhe: any[] = [];
@@ -20,9 +20,9 @@ export class MuaVeComponent implements OnInit, OnDestroy {
   subService: Subscription;
 
   constructor(private avtRoute: ActivatedRoute,
-    private layThongTinPhimService: LayThongTinPhimService,
-    private veService: VeService,
-    private router: Router
+              private layThongTinPhimService: LayThongTinPhimService,
+              private veService: VeService,
+              private router: Router
   ) { } // ActivatedRoute: là đối tượng để lấy tham số từ Url (get params url)
 
   maPhim = 0;
@@ -46,19 +46,22 @@ export class MuaVeComponent implements OnInit, OnDestroy {
   layThongTinVe() {
     const ve = {
       MaLichChieu: this.MaLichChieu,
-      TaiKhoanNguoiDung: this.LayTaiKhoanNguoiDung(),
+      // TaiKhoanNguoiDung: this.LayTaiKhoanNguoiDung(),
       DanhSachVe: this.dsGhe.DanhSachGheDangDat,
     };
-    console.log(ve);
-    this.veService.DatVe(ve).subscribe(
-      (result) => {
-        console.log(result);
-        this.router.navigate(['/home']);
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
+    if (ve.DanhSachVe.length !== 0) {
+      this.veService.DatVe(ve).subscribe(
+        (result) => {
+          console.log(result);
+          this.router.navigate(['/home']);
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+    } else {
+      alert('Bạn chưa chọn ghế');
+    }
   }
 
 
@@ -71,48 +74,55 @@ export class MuaVeComponent implements OnInit, OnDestroy {
     //   this.LayChiTietPhim(thamso.maphim);
     //   console.log(this.maPhim);
     // });
+    // lay ma phim cua phim vua chon
+    //     this.avtRoute.params
+    //     .subscribe((result) => {
+    //       this.MaLichChieu = result.maLichChieu;
+    //       this.veService.LayChiTietPhongVe(this.MaLichChieu).subscribe(
+    //         (res) => {
+    //           this.DanhSachGhe = res.DanhSachGhe;
+    //           console.log(res.DanhSachGhe);
+    //         }
+    //       );
+    //     },
+    //       (error) => { console.log(error); });
+    // }
+
+
 
     this.avtRoute.params
-      .subscribe((thamso: any) => {
-        this.MaLichChieu = thamso.maLichChieu;
-        this.veService.LayChiTietPhongVe(this.MaLichChieu).subscribe(
-          (res) => {
-            this.DanhSachGhe = res.DanhSachGhe;
-            console.log(res.DanhSachGhe);
-          }
-        );
-      },
-        (error) => { console.log(error); });
-  }
+    .subscribe((result) => {
+      this.MaLichChieu = result.maLichChieu;
+      this.veService.LayChiTietPhongVe(this.MaLichChieu).subscribe(
+        (res) => {
+          this.DanhSachGhe = res.DanhSachGhe;
+          console.log(res.DanhSachGhe);
+        }
+      );
+    },
+      (error) => { console.log(error); });
+    // const phim: Phim = JSON.parse(localStorage.getItem('ChiTietPhim'));
+    // console.log(typeof phim);
+}
 
-//     this.avtRoute.params
-//     .subscribe((result) => {
-//       this.MaLichChieu = result.maLichChieu;
-//       this.veService.LayChiTietPhongVe(this.MaLichChieu).subscribe(
-//         (res) => {
-//           this.DanhSachGhe = res.DanhSachGhe;
-//           console.log(res.DanhSachGhe);
-//         }
-//       );
-//     },
-//       (error) => { console.log(error); });
+
+
+
+
+// LayChiTietPhim(maPhim: number) {
+//   this.subService = this.layThongTinPhimService.LayChiTietPhim(maPhim).subscribe((ketqua) => {
+//     console.log(ketqua);
+//     this.phim = ketqua;
+//   },
+//     (err) => {
+//       console.log(err);
+//     });
 // }
 
-
-LayChiTietPhim(maPhim: number) {
-  this.subService = this.layThongTinPhimService.LayChiTietPhim(maPhim).subscribe((ketqua) => {
-    console.log(ketqua);
-    this.phim = ketqua;
-  },
-    (err) => {
-      console.log(err);
-    });
-}
-
-ngOnDestroy() {
-  this.subParam.unsubscribe();
-  this.subService.unsubscribe();
-}
-
+// ngOnDestroy() {
+//   this.subParam.unsubscribe();
+//   this.subService.unsubscribe();
+// }
 
 }
+
