@@ -48,6 +48,7 @@ export class TrangChiTietComponent implements OnInit, OnDestroy {
   }
   LayChiTietPhim(maPhim: number) {
     this.subService = this.layThongTinPhimService.LayChiTietPhim(maPhim).subscribe((ketqua) => {
+      localStorage.setItem('ChiTietPhim', JSON.stringify(ketqua));
       console.log(ketqua);
       this.phim = ketqua;
       this.isShowContent = true;
@@ -63,3 +64,5 @@ export class TrangChiTietComponent implements OnInit, OnDestroy {
   }
 
 }
+
+

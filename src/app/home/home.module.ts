@@ -21,12 +21,14 @@ import { MuaVeComponent } from './mua-ve/mua-ve.component';
 import { ItemLichChieuComponent } from './trang-chu/lich-chieu/item-lich-chieu/item-lich-chieu.component';
 import { DanhSachGheComponent } from './mua-ve/danh-sach-ghe/danh-sach-ghe.component';
 import { GheComponent } from './mua-ve/danh-sach-ghe/ghe/ghe.component';
+import { PhimSapChieuComponent } from './trang-chu/danh-sach-phim/phim-sap-chieu/phim-sap-chieu.component';
+import { PhimDangChieuComponent } from "./trang-chu/danh-sach-phim/phim-dang-chieu/phim-dang-chieu.component";
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   // tslint:disable-next-line:max-line-length
-  declarations: [TrangChuComponent, HeaderComponent, FooterComponent, TrangChiTietComponent, SliderComponent, DanhSachPhimComponent, ItemPhimComponent, LichChieuComponent, ThongTinPhimComponent, DanhGiaPhimComponent, HomeComponent, DangNhapComponent, TintucComponent, DangKyComponent, MuaVeComponent, ItemLichChieuComponent, DanhSachGheComponent, GheComponent],
+  declarations: [TrangChuComponent, HeaderComponent, FooterComponent, TrangChiTietComponent, SliderComponent, DanhSachPhimComponent, ItemPhimComponent, LichChieuComponent, ThongTinPhimComponent, DanhGiaPhimComponent, HomeComponent, DangNhapComponent, TintucComponent, DangKyComponent, MuaVeComponent, ItemLichChieuComponent, DanhSachGheComponent, GheComponent, PhimSapChieuComponent, PhimDangChieuComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

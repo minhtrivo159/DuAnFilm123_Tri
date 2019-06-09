@@ -27,7 +27,7 @@ const routesHome: Routes = [
       { path: 'lich-chieu', component: LichChieuComponent },
       { path: 'danh-sach-phim', component: DanhSachPhimComponent },
       { path: 'chi-tiet/:maphim', component: TrangChiTietComponent },
-      { path: 'mua-ve/:maphim', component: MuaVeComponent},
+      { path: 'mua-ve/:malichchieu', component: MuaVeComponent},
 
     ]
   },

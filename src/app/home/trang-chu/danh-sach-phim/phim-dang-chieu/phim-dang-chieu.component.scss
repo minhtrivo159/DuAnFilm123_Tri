@@ -1,0 +1,257 @@
+.ds_phim{
+  width: 80%;
+  margin: 0 auto;
+}
+.dsPhim{
+  padding: 20px 10px;
+  position: relative;
+  float: left;
+}
+
+.display-4 {
+font-size: 24px;
+font-weight: 300;
+line-height: 1.2;
+color: #fa5238;
+text-align:  center;
+padding-top: 20px;
+}
+
+.hover_item_phim .icon_play_phim{
+      font-size: 15px;
+      color: #ffffff;
+      line-height: 40px;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      border: 1px solid #ffffff;
+      border-radius:50%;
+      position: absolute;
+      -webkit-border-radius:50%;
+      -moz-border-radius:50%;
+      -ms-border-radius:50%;
+      -o-border-radius:50%;
+      top: 35%;
+      left: 42%;
+}
+.hover_item_phim, .btn_mua_ve{
+  display: none;
+}
+.dsPhim:hover .hover_item_phim{
+  display: block;
+  transition: 3s;
+  -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  -o-transition: 3s;
+}
+.dsPhim:hover .btn_mua_ve{
+  display: block;
+  transition: 3s;
+  -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  -o-transition: 3s;
+}
+
+.card-body{
+      padding: 20px 0;
+      padding-bottom: 0;
+      display: block;
+}
+.dsPhim:hover .card-body{
+  display: none;
+}
+.dsPhim:hover{
+  background: linear-gradient(to top,rgb(37, 29, 29),transparent 100%);
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  height: 450px;
+  transition: 2s;
+}
+.icon_play_phim a{
+  color: #ffffff;
+}
+
+/////////
+ .ageType {
+background-color: #fb4226;
+border-radius: 4px;
+padding: 0 5px;
+position: absolute;
+top: 40px;
+left: 30px;
+color: #fff;
+min-width: 33px;
+text-align: center;
+}
+
+//starts///
+
+.avgPoint {
+  font-family: 'SF Medium';
+  font-size: 16px;
+  background-color: rgba(12,27,54,.8);
+  border: 1px solid #1f2e46;
+  border-radius: 4px;
+  padding: 2px;
+  position: absolute;
+  top: 40px;
+  right: 25px;
+  color: #fff;
+  width: 54px;
+  text-align: center;
+}
+
+.avgPoint .txtPoint {
+text-align: center;
+transform: scaleY(1.2);
+}
+
+.avgPoint p {
+margin: 0 !important;
+text-align: center;
+}
+
+p {
+margin: 0 0 10px;
+}
+.avgPoint {
+font-family: 'SF Medium';
+font-size: 16px;
+color: #fff;
+text-align: center;
+}
+
+ img {
+border-radius: 4px;
+}
+.avgPoint img {
+display: inline-block;
+max-width: 8px;
+}
+
+.aChiTiet :active {
+width: 100%;
+margin: auto;
+// display: none;
+}
+
+
+.btn-success {
+
+  background-color: #f26b38 !important;
+  color: #fff;
+  display: none;
+  top: 10%;
+
+}
+
+
+.dsPhim:hover .aChiTiet {
+
+background-color: #f26b38 !important;
+color: #fff;
+display: block;
+padding: 15px 0;
+margin: -35px 25px;
+// height: 510px;
+}
+
+.btn_mua_ve{
+width: 160px;
+background-color: #fb4226;
+position: absolute;
+top: 85%;
+// margin-left: 46px;
+// margin: auto;
+// left: 20%;
+margin: 15px 45px;
+}
+
+#homeMovies{
+padding-top: 80px;
+background: url(/assets/images/back-news.png);
+background-repeat: repeat;
+background-size: auto;
+background-repeat: repeat;
+background-size: auto;
+background-size: 100%;
+background-repeat: no-repeat;
+}
+
+.display-4 {
+font-size: 24px;
+font-weight: 300;
+line-height: 1.2;
+color: #fa5238;
+text-align: center;
+padding-top: 20px;
+padding-bottom: 20px;
+margin: auto;
+}
+
+
+.listFilm{
+width: 80%;
+margin: 0 auto;
+}
+
+
+ul{
+display: inline-flex;
+}
+li{
+font-size: 25px;
+border: unset;
+box-shadow: none;
+text-decoration: unset;
+list-style: none;
+}
+li span{
+cursor: pointer;
+color: black;
+text-decoration: none;
+}
+li span:hover{
+font-size: 25px;
+text-decoration: none;
+transition: all 0.5s;
+}
+.li_content:hover{
+font-size: 25px;
+transition: all 0.5s;
+text-decoration: unset;
+}
+.li_content span{
+font-size: 20px;
+color: #FB4226;
+}
+.li_content span:hover{
+color: #FB4226;
+cursor: pointer;
+text-decoration: none;
+}
+.list_film{
+width: 100%;
+margin: 0 auto;
+float: left;
+}
+.list_film2{
+width: 100%;
+margin: 0 auto;
+}
+
+.dsPhim:hover .tenPhim{
+  display: none;
+}
+
+.tenPhim {
+
+  text-align: center;
+  margin: -20px 0 10px 0;
+  color: #fa5238;
+}

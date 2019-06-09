@@ -5,6 +5,7 @@
 .dsPhim{
     padding: 20px 10px;
     position: relative;
+    float: left;
 }
 
 .display-4 {
@@ -62,13 +63,14 @@
     display: none;
 }
 .dsPhim:hover{
-    background: linear-gradient(to top,#000,transparent 100%);
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    height: 510px;
+  background: linear-gradient(to top,#000,transparent 100%);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  height: 450px;
+  transition: 0s;
 }
 .icon_play_phim a{
     color: #ffffff;
@@ -162,7 +164,7 @@ p {
   color: #fff;
   display: block;
   padding: 15px 0;
-  margin: 15px 45px;
+  margin: -35px 25px;
   // height: 510px;
 }
 
@@ -197,4 +199,56 @@ p {
   padding-top: 20px;
 padding-bottom: 20px;
   margin: auto;
+}
+
+
+.listFilm{
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+ul{
+  display: inline-flex;
+}
+li{
+  font-size: 25px;
+  border: unset;
+  box-shadow: none;
+  text-decoration: unset;
+  list-style: none;
+}
+li span{
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  color : white;
+}
+li span:hover{
+  font-size: 25px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.li_content:hover{
+  font-size: 25px;
+  transition: all 0.5s;
+  text-decoration: unset;
+}
+.li_content span{
+  font-size: 20px;
+  color: #FB4226;
+}
+.li_content span:hover{
+  color: #FB4226;
+  cursor: pointer;
+  text-decoration: none;
+}
+.list_film{
+  width: 100%;
+  margin: 0 auto;
+  float: left;
+}
+.list_film2{
+  width: 100%;
+  margin: 0 auto;
 }

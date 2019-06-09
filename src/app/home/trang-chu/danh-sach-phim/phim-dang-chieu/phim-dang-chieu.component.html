@@ -1,0 +1,45 @@
+<div class="owl-carousel owl-theme row">
+  <div class="row">
+  <div class=" col-md-3 dsPhim collapse-group item" *ngFor="let phim of DSPhim" >
+      <app-item-phim [phim]="phim" (evtTrailer)="showContent($event)"></app-item-phim>
+      <h6 class="tenPhim">{{phim.TenPhim | uppercase}}</h6>
+      <div class="card-body">
+
+        <!--<p>{{phim.NgayKhoiChieu | date: 'dd/MM/yyyy, hh:mm'}}</p> -->
+        <!-- <p class="card-text">{{phim.MoTa | lowercase }}</p> -->
+
+        <span class="ageType ng-binding">
+          C18
+        </span>
+        <!--  -->
+        <span ng-if="film.avg_point !== 0" class="avgPoint ng-scope">
+          <p class="txtPoint ng-binding">8.9</p>
+          <p ng-bind-html="setStar(film.avg_point)" class="ng-binding">
+            <img class="smallStar" src="../../../../assets/images/star1.png">
+            <img class="smallStar" src="./assets/images/star1.png">
+            <img class="smallStar" src="./assets/images/star1.png">
+            <img class="smallStar" src="./assets/images/star1.png">
+            <img class="half" src="./assets/images/star1.2.png"></p>
+        </span>
+      </div>
+
+      <!-- <button class="btn btn-danger btn_mua_ve">Mua Vé</button> -->
+      <!-- <a href="#" routerLink="/home/mua-ve/{{phim.MaPhim}}" class="btn btn-danger btn_mua_ve nav-link">Mua Vé</a> -->
+      <!-- <button routerLink="/home/chi-tiet-phim/{{phim.MaPhim}}" class="btn btn-primary">Xem Chi Tiết</button> -->
+      <a  href= "#" routerLink="/home/chi-tiet/{{phim.MaPhim}}" class="btn btn-success aChiTiet nav-link">Thông Tin Phim</a>
+
+      <!-- <a data-type="films" onclick="get_sub_film(this);return false;" data-id="HO00001340" href="#" class="btn--green"><i class="fa fa-ticket"></i>MUA VÉ</a> -->
+      <!-- <div class="hover_item_phim">
+      <div class="icon_play_phim">
+        <a href="#"><i class="fa fa-play" aria-hidden="true"></i></a>
+      </div>
+    </div> -->
+      <!-- <a href="#" routerLink="/home/chi-tiet-phim/{{phim.MaPhim}}" class="btn btn-primary">Xem Chi Tiết</a> -->
+      <!-- <a data-type="films" onclick="get_sub_film(this);return false;" data-id="HO00001340" href="#" class="btn--green"><i class="fa fa-ticket"></i>MUA VÉ</a> -->
+    <!-- </div> -->
+
+
+  <!-- </div> -->
+  </div>
+</div>
+</div>

@@ -1,47 +1,29 @@
 <div class="container-fluid ds_phim " id="filmblock">
-  <h1 class="display-4" #target>Phim Đang Chiếu</h1>
-  <div class="row" id="homeMovies">
-
-    <!-- <div class="owl-carousel owl-theme"> -->
-      <div class="col-md-3 dsPhim collapse-group item" *ngFor="let phim of DSPhim">
-        <app-item-phim [phim]="phim"></app-item-phim>
-        <div class="card-body">
-          <h6 class="card-title">{{phim.TenPhim | uppercase}}</h6>
-          <p>{{phim.NgayKhoiChieu | date: 'dd/MM/yyyy, hh:mm'}}</p>
-          <!-- <p class="card-text">{{phim.MoTa | lowercase }}</p> -->
-          <!--  -->
-          <span class="ageType ng-binding">
-            C18
-          </span>
-          <!--  -->
-          <span ng-if="film.avg_point !== 0" class="avgPoint ng-scope">
-            <p class="txtPoint ng-binding">8.9</p>
-            <p ng-bind-html="setStar(film.avg_point)" class="ng-binding">
-              <img class="smallStar" src="../../../../assets/images/star1.png">
-              <img class="smallStar" src="./assets/images/star1.png">
-              <img class="smallStar" src="./assets/images/star1.png">
-              <img class="smallStar" src="./assets/images/star1.png">
-              <img class="half" src="./assets/images/star1.2.png"></p>
-          </span>
-        </div>
-
-        <!-- <button class="btn btn-danger btn_mua_ve">Mua Vé</button> -->
-        <!-- <a href="#" routerLink="/home/mua-ve/{{phim.MaPhim}}" class="btn btn-danger btn_mua_ve nav-link">Mua Vé</a> -->
-        <!-- <button routerLink="/home/chi-tiet-phim/{{phim.MaPhim}}" class="btn btn-primary">Xem Chi Tiết</button> -->
-        <a  href= "#" routerLink="/home/chi-tiet/{{phim.MaPhim}}" class="btn btn-success aChiTiet nav-link">Đặt Vé</a>
-
-        <!-- <a data-type="films" onclick="get_sub_film(this);return false;" data-id="HO00001340" href="#" class="btn--green"><i class="fa fa-ticket"></i>MUA VÉ</a> -->
-        <!-- <div class="hover_item_phim">
-        <div class="icon_play_phim">
-          <a href="#"><i class="fa fa-play" aria-hidden="true"></i></a>
-        </div>
-      </div> -->
-        <!-- <a href="#" routerLink="/home/chi-tiet-phim/{{phim.MaPhim}}" class="btn btn-primary">Xem Chi Tiết</a> -->
-        <!-- <a data-type="films" onclick="get_sub_film(this);return false;" data-id="HO00001340" href="#" class="btn--green"><i class="fa fa-ticket"></i>MUA VÉ</a> -->
-      <!-- </div> -->
+  <!-- <h1 class="display-4" #target>Phim Đang Chiếu</h1> -->
 
 
-
+  <div class="row">
+    <div class="col-12 text-center">
+      <ul>
+        <li class=" mr-4"  [ngClass]="{'li_content':dangchieuStatus}" (click)="HienPhimDangChieu()"><span>PHIM ĐANG CHIẾU</span></li>
+        <li class="" [ngClass]="{'li_content':!dangchieuStatus}" (click)="HienPhimSapChieu()"><span>PHIM SẮP CHIẾU</span></li>
+      </ul>
     </div>
+  </div>
+
+
+
+  <div class="row" id="homeMovies">
+      <div class="list_film " *ngIf="dangchieuStatus; else PhimSapChieu">
+        <app-phim-dang-chieu></app-phim-dang-chieu>
+        </div>
+
+        <ng-template #PhimSapChieu>
+            <div class="list_film2" >
+                <app-phim-sap-chieu></app-phim-sap-chieu>
+              </div>
+        </ng-template>
+
+
   </div>
 </div>

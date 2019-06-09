@@ -1,8 +1,15 @@
-<ng-container *ngIf="!ghe.DaDat; else GheDaDat">
-  <button class="btn btn-dark mr-1 mb-2"
-   [ngClass]="{'btn-success':status,'btn-dark':!status}"
+<!-- <ng-container *ngIf="!ghe.DaDat; else GheDaDat">
+  <button class="btn"
+   [ngClass]="{'btn-success':status,'btn':!status}"
    (click)="datGhe()">{{ghe.TenGhe}}</button>
 </ng-container>
 <ng-template #GheDaDat>
 <button class="btn btn-danger mr-2 mb-2" disabled>{{ghe.TenGhe}}</button>
-</ng-template>
+</ng-template> -->
+
+<button *ngIf="!gheStatus" class="btn btn_chuadat mr-1 mb-2"
+[ngClass]="{'btn_dadat':status,'btn_chuadat':!status}"
+(click)="datGhe()">{{ghe.TenGhe}}</button>
+<button *ngIf="gheStatus"class="btn btn_disable  mr-1 mb-2" disabled>
+  <img src="../../../../../assets/images/btn-x.png" alt="">
+</button>

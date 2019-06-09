@@ -1,0 +1,6 @@
+<div class="row">
+    <div class=" col-md-3 dsPhim collapse-group item " *ngFor="let phim of DanhSachPhimSapChieu">
+      <app-item-phim [phim]="phim"  (evtTrailer)="showContent($event)"></app-item-phim>
+    </div>
+</div>
+

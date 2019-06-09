@@ -1,0 +1,40 @@
+button{
+    // width: 30px;
+    height: 40px;
+
+    color: white;
+    padding-left: 1.14rem;
+padding-right: 1.14rem;
+}
+button:focus{
+    box-shadow: unset;
+
+}
+
+.btn:hover {
+  color: white;
+  // font-size: 20px;
+  // border: 1px solid #fb4226;
+  // color: #ff7340;
+  text-decoration: none;
+}
+
+.btn_dadat {
+    background-color: rgb(235, 124, 81);
+    height: 40px;
+
+}
+.btn_disable{
+    background-color: black;
+    height: 40px;
+}
+
+.btn_chuadat{
+    background-color: #c8bebe;
+}
+
+img{
+    width: 14px;
+    // height: 15px;
+    padding-bottom: 5px;
+}

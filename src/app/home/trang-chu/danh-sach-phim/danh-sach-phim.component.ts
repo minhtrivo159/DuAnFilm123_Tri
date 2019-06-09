@@ -11,43 +11,42 @@ import { $ } from 'jquery';
   templateUrl: './danh-sach-phim.component.html',
   styleUrls: ['./danh-sach-phim.component.scss']
 })
-export class DanhSachPhimComponent implements OnInit, OnDestroy {
+export class DanhSachPhimComponent implements OnInit,OnDestroy {
+
+  constructor(private dsPhim: LayDanhSachPhimService) { }
   // @ViewChild(MatPaginator) paginator: MatPaginator;
   subService: Subscription;
   Subscription: any;
   DSPhim: any = [];
+  dangchieuStatus = true;
 
-  constructor(private dsPhim: LayDanhSachPhimService) { }
+  contentModal = '';
+  HienPhimDangChieu() {
+    this.dangchieuStatus = true;
+  }
+  HienPhimSapChieu() {
+    this.dangchieuStatus = false;
+  }
 
-
+  showContent(trailer: string) {
+    this.contentModal = trailer;
+  }
+  close() {
+    $('.iframe-youtube').each(function() {
+      $(this).attr('src', $(this).attr('src'));
+    });
+  }
 
   ngOnInit() {
     console.log(this.dsPhim);
     this.subService = this.dsPhim.LayDanhSachPhim().subscribe((result) => {
       this.DSPhim = result;
-      // setTimeout(() => {
-      //   $('.owl-carousel').owlCarousel({
-      //     loop: true,
-      //     margin: 100,
-      //     nav: true,
-      //     responsive: {
-      //       0: {
-      //         items: 1
-      //       },
-      //       600: {
-      //         items: 3
-      //       },
-      //       1000: {
-      //         items: 3
-      //       }
-      //     }
-      //   });
-      // }, 1);
       console.log(result);
-    }, (error) => {
-      console.log(error);
-    });
-  }
+    },
+    error => { console.log(error); },
+  );
+}
+
   ngOnDestroy() {
     this.subService.unsubscribe(); // hủy theo doi bien observable
   }

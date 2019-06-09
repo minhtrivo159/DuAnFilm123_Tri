@@ -1,13 +1,24 @@
-
-        <app-danh-sach-ghe [mangGhe]="DanhSachGhe"></app-danh-sach-ghe>
-        <div class="container">
-          <div class="row">
-            <div class="col-6 mx-auto ">
-              <button class="btn btn-outline-success" (click)="layThongTinVe()">Dat ve</button>
-            </div>
-          </div>
-        </div>
+<app-danh-sach-ghe [mangGhe]="DanhSachGhe" (emitTongTienVe)="tongTienVe($event)" (selectEmit)="scrollToElement($event)"></app-danh-sach-ghe>
 
 
 
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 mx-auto divVe">
+      <!-- <img src={{phim.HinhAnh}} alt=""> -->
+      <h1> {{tongTienDat()}} VNĐ</h1>
 
+      <div class="mx-auto divSpan" style="width: 70%">
+          <span>(*) Bằng việc click/chạm vào <span class="font-weight-bold">THANH TOÁN</span>, bạn đã xác nhận hiểu rõ các <span class="font-weight-bold">Qui Định Giao Dịch Trực Tuyến</span> của DuAnPhim123 Cinema </span> <br>
+      </div>
+
+      <button class="btn btn-outline btnDatVe mr-3" routerLink="/home/chi-tiet/{{phim.MaPhim}}" id="DatVe">QUAY LẠI</button>
+      <button class="btn btn-outline btnDatVe" (click)="layThongTinVe()" id="DatVe">THANH TOÁN</button>
+
+    </div>
+    <div class=" col-md-3 ">
+
+    </div>
+  </div>
+</div>

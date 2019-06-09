@@ -1,15 +1,83 @@
 <div class="container">
   <div class="row">
-    <div class="col-5 mx-auto">
-      <app-ghe *ngFor="let ghe of mangGhe" [ghe]="ghe" (emitStatus)="datGheParent($event,ghe)"></app-ghe>
+    <div class="col-md-3 ds1">
+
+      <div class="movieImg text-center">
+          <img src={{phim.HinhAnh}}>
+      </div>
+
+       <div class="movieTittle">
+          <h1>{{phim.TenPhim}} </h1>
+          <span>{{phim.NgayKhoiChieu | date: 'dd.MM.yyyy'}}</span>
+          <p id="Phim">{{phim.MoTa}}</p>
+       </div>
+
+    </div>
+    <div class="col-md-6 mx-auto btnVe ds2 text-center">
+
+      <div class="screen">
+        <img style="width: 100%" src="../../../../assets/images/Screen.png" alt="">
+      </div>
+
+      <app-ghe *ngFor="let ghe of mangGhe" [ghe]="ghe" (click)="show()" (emitStatus)="datGheParent($event,ghe)">
+      </app-ghe>
+
+      <div class="note">
+        <div class="note_content">
+          <div class="row">
+            <button class="btn btn_chuadat mr-2" disabled></button>
+            <span class="mr-2">: Ghế còn trống</span>
+            <button class="btn btn_dadat mr-2" disabled></button>
+            <span class="mr-2">: Ghế được chọn</span>
+            <button class="btn btn_disable mr-2" disabled>
+              <img src="../../../../../assets/images/btn-x.png" alt="">
+            </button>
+            <span class="mr-2">: Ghế đã được đặt</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-3  ds3">
+      <h1 class="text-center" style="color: green">ĐẶT VÉ</h1>
       <hr />
-      <p>So ghe da dat: {{soGheDaChon}}</p>
-      <p>So ghe con lai: {{soGheConTrong}}</p>
-      <hr />
-      <p *ngFor = "let gheDuocChon of DanhSachGheDangDat2">
-        <span>Ten Ghe: {{gheDuocChon.TenGhe}}</span>
-        <span>Gia:{{gheDuocChon.GiaVe}} </span>
+      <p>Số ghế còn trống:   {{soGheConTrong}} ghế</p>
+      <p>Ghế vừa được chọn:   {{soGheDaChon}} ghế</p>
+      <p> Tên ghế:
+        <span *ngFor="let gheDuocChon of DanhSachGheDangDat2">{{gheDuocChon.TenGhe}}, </span>
+        <!-- <span *ngFor = "let gheDuocChon of DanhSachGheDangDat2" >Giá tiền: {{gheDuocChon.GiaVe}} </span> -->
       </p>
+      <!-- <hr>
+        <h6>Thông Tin Bổ Sung</h6> -->
+
+      <hr>
+        <h6>Vui Lòng Chọn Hình Thức Thanh Toán</h6>
+        <div class="form-check">
+            <label class="form-check-label" (click)="select('MoMo')">
+
+              <input type="radio" class="form-check-input" name="optradio">MoMo
+              <img src="../../../../assets/images/doi-tac-17.png" alt="">
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" (click)="select('ZaloPay')">
+              <input type="radio" class="form-check-input" name="optradio">ZaloPay
+              <img src="../../../../assets/images/doi-tac-10.png" alt="">
+            </label>
+          </div>
+          <div class="form-check">
+              <label class="form-check-label" (click)="select('ATM')">
+                <input type="radio" class="form-check-input" name="optradio">ATM Card/Visa/Master
+                <img src="../../../../assets/images/doi-tac-11.png" alt="">
+                <img src="../../../../assets/images/doi-tac-12.png" alt="">
+                <img src="../../../../assets/images/doi-tac-14.png" alt="">
+              </label>
+            </div>
+
+        <!-- <div>
+          <input type="text">
+        </div> -->
+
     </div>
   </div>
 </div>

@@ -26,10 +26,17 @@ export class VeService {
       });
   }
 
-  public LayChiTietPhongVe(MaLichChieu: any): Observable<any> {
-    const url = `http://svcy2.myclass.vn/api/QuanLyPhim/ChiTietPhongVe?MaLichChieu=${MaLichChieu}`;
-    return this.http.get(url);
-  }
+  // public LayChiTietPhongVe(MaLichChieu: any): Observable<any> {
+  //   const url = `http://svcy2.myclass.vn/api/QuanLyPhim/ChiTietPhongVe?MaLichChieu=${MaLichChieu}`;
+  //   return this.http.get(url);
+  // }
 
+  public LayChiTietPhongVe(MaLichChieu: any): Observable<any> {
+    // const url = `http://svcy2.myclass.vn/api/QuanLyPhim/ChiTietPhongVe?MaLichChieu=${MaLichChieu}`;
+    // return this.http.get(url, MaLichChieu);
+    const obs = this.http.get( `http://svcy2.myclass.vn/api/QuanLyPhim/ChiTietPhongVe?MaLichChieu=${MaLichChieu}`);
+    return obs;
+
+  }
 
 }

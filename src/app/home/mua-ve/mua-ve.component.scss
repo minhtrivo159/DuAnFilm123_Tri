@@ -15,6 +15,7 @@
   margin-right: auto;
   margin-left: auto;
 }
+
 /////////////
 
 .btn-group-vertical > .btn-group::after, .btn-group-vertical > .btn-group::before, .btn-toolbar::after, .btn-toolbar::before, .clearfix::after, .clearfix::before, .container-fluid::after, .container-fluid::before, .container::after, .container::before, .dl-horizontal dd::after, .dl-horizontal dd::before, .form-horizontal .form-group::after, .form-horizontal .form-group::before, .modal-footer::after, .modal-footer::before, .modal-header::after, .modal-header::before, .nav::after, .nav::before, .navbar-collapse::after, .navbar-collapse::before, .navbar-header::after, .navbar-header::before, .navbar::after, .navbar::before, .pager::after, .pager::before, .panel-body::after, .panel-body::before, .row::after, .row::before {
@@ -694,3 +695,33 @@ p {
 
 //////////////
 
+.btnDatVe{
+  padding: 10px 25px;
+  border: 2px solid #eb7c51;
+}
+.btnDatVe:hover{
+  background-color: #eb7c51;
+  color: white;
+}
+// .col-md-4.divVe {
+//   left: 815px;
+//   top: -50px;
+// }
+
+.container{
+  padding: 30px 0 30px 0;
+}
+.container {
+  max-width: 1280px;
+}
+.divVe{
+  text-align: center;
+  top: -80%;
+}
+.divVe h1{
+  color: green;
+  margin-bottom: 30px;
+}
+.divSpan{
+  margin: 10px 0 ;
+}
