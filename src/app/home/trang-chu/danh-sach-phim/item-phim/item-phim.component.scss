@@ -3,7 +3,9 @@
 //     padding-bottom: 0;
 //     display: none;
 // }
-
+.hinh_anh{
+  position: relative;
+}
 .card-title{
     font-family: 'SF Medium';
     font-size: 16px;
@@ -17,6 +19,11 @@
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+    z-index: 6;
+}
+.hinh_anh:hover .movie_play_button {
+  display: block;
+  transition: 13s;
 }
 .card-img-top {
     width: 100%;
@@ -27,4 +34,41 @@
 }
 .hinh_anh {
   margin-bottom: 50px;
+
+}
+.movie_play_button{
+  position: absolute;
+  top: 30%;
+  left: 37%;
+  display: none;
+  border: unset;
+  background-color: transparent;
+  outline: none;
+  z-index: 5;
+
+}
+
+.movie_play_button:hover i{
+  box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.5);
+}
+.movie_play_button i{
+  font-size: 30px;
+  border-radius: 50%;
+  border: solid 1px white;
+  width: 50px;
+  height: 50px;
+  color: white;
+  padding: 9px 15px;
+}
+.background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  display: none;
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+  z-index: 4;
+
 }

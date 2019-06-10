@@ -76,8 +76,12 @@
 
       </div>
 
+
+
+
       <div class="row row-muave">
         <div class="button_booking" #target>
+          <h1 class="text-center" style="color: #f26b38">Lịch Chiếu</h1>
           <button class="btn  mt-5 mr-2" [routerLink]="['/home/mua-ve',lichchieu.MaLichChieu]"
             *ngFor="let lichchieu of phim.LichChieu">
             {{lichchieu.NgayChieuGioChieu| date:'dd/MM'}}

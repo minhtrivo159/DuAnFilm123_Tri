@@ -255,3 +255,17 @@ margin: 0 auto;
   margin: -20px 0 10px 0;
   color: #fa5238;
 }
+
+button{
+    position: absolute;
+    top: -20px;
+    right: -120px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: transparent;
+    outline: unset;
+    border: solid 1px white;
+    color: white;
+    font-size: 20px
+}

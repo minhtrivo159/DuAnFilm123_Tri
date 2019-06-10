@@ -24,7 +24,7 @@ import { GheComponent } from './mua-ve/danh-sach-ghe/ghe/ghe.component';
 import { PhimSapChieuComponent } from './trang-chu/danh-sach-phim/phim-sap-chieu/phim-sap-chieu.component';
 import { PhimDangChieuComponent } from "./trang-chu/danh-sach-phim/phim-dang-chieu/phim-dang-chieu.component";
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { PipeModule } from '../share/pipe/pipe.module';
 
 @NgModule({
   // tslint:disable-next-line:max-line-length
@@ -33,7 +33,8 @@ import { PhimDangChieuComponent } from "./trang-chu/danh-sach-phim/phim-dang-chi
     CommonModule,
     HomeRoutingModule,
     MaterialAngularModule,
-    FormsModule
+    FormsModule,
+    PipeModule
   ],
   exports: [
     // tslint:disable-next-line:max-line-length

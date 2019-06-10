@@ -18,6 +18,16 @@ export class PhimDangChieuComponent implements OnInit, OnDestroy{
 
   constructor(private dsPhim: LayDanhSachPhimService) { }
 
+  contentModal = '';
+  showContent(trailer: string) {
+    this.contentModal = trailer;
+  }
+  close() {
+    $('.iframe-youtube').each(function() {
+      $(this).attr('src', $(this).attr('src'));
+    });
+  }
+
   ngOnInit() {
     console.log(this.dsPhim);
     this.subService =
